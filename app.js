@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 const {getExpenses,getExpensesid, addExpenses, deleteExpenses,updateExpenses,loggerFunc,checkAdmin} = require('./controller/expense');
-mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.vi5dn12.mongodb.net/expense-tracker`,
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.vi5dn12.mongodb.net/?retryWrites=true&w=majority`,
     {
     useNewUrlParser: true
     }
